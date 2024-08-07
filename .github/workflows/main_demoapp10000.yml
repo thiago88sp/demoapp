@@ -40,6 +40,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Display Docker version
+        run: docker --version
+
       - name: Set up environment
         run: |
           env | grep -E "GITHUB_ACTIONS|GITHUB_RUN_NUMBER|GITHUB_REF_NAME|GITHUB_SHA" > /tmp/env
